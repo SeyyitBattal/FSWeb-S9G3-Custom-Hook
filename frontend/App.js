@@ -7,7 +7,8 @@ import { useInput } from "./components/hooks/geceModuAc";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [darkMode, onClickHandler] = useInput(false);
+  const [darkMode, setDarkMode, onClickHandler] = useInput("Mood", false);
+  const [login, setLogin, logHandler] = useInput("login", false);
 
   useEffect(() => {
     axios
